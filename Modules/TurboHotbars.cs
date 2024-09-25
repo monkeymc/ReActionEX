@@ -54,7 +54,8 @@ public unsafe class TurboHotbars : PluginModule
 
         var isPressed = InputData.isInputIDPressed.Original(inputData, id);
         var isHeld = inputData->IsInputIDHeld(id);
-        if (ReActionEx.Config.ToggleTurboMode)
+        if (ReActionEx.Config.ToggleTurboMode 
+            && id == 57)
         {
             if (isHeld && !info.TimeHeld.IsRunning)
             {
